@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+	
+        stage('checkout') {
+            steps {
+                echo 'git check out stage'
+			    git branch: 'main', url: 'https://github.com/devopstraininghub/mindcircuit17d.git'
+            }
+        }
+		
+        stage('build') {
+            steps {
+                echo 'build with maven'
+			    sh 'mvn clean install'
+            }
+        }
+		
+        stage('deploy') {
+            steps {
+                echo 'deply in tomcat'
+				deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://ec2-13-217-215-176.compute-1.amazonaws.com:8080')], contextPath: 'Instagram', war: '**/*.war'
+            }
+        }
+    }
+}
