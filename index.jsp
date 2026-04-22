@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:orange;">
 
-<h1>WELCOME TO JENKINS PIPELINE WORLD </h1>
-
+<body style="background-color: blue;">
+<h1>Welcome to jenkins world</h1>
 
 </body>
 </html>
