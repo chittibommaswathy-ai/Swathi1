@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>My Simple Web App</title>
 
-<body style="background-color: blue;">
-<h1>Welcome to jenkins world</h1>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
 
-</body>
-</html>
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: black;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: darkblue
